@@ -31,39 +31,146 @@
       margin-top: 20px;
       border-radius: 12px;
     }
+    
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #dce6ef;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(23, 50, 77, 0.06);
+}
+
+.project-card h3 {
+  color: #17324d;
+  margin-top: 0;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+}
+
+.project-card .project-skills {
+  color: #526579;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.project-card a {
+  color: #1769aa;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1>My Data Science Portfolio</h1>
+    <h1>Andrea Barfield Data Science Portfolio</h1>
     <p>Exploring data. Building models. Finding insights.</p>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <section>
     <h2>Welcome!</h2>
     <p>
-      Welcome to my data science portfolio. I am developing
+      Welcome to my data science portfolio. I am actively developing
       skills in machine learning, predictive analytics, and
-      data analysis through coursework and hands-on projects.
+      data analysis through coursework and hands-on projects. This portfolio 
+      is a combination of complete projects and smaller pieces of projects that
+      I have completed during my studies. 
     </p>
   </section>
 
-  <section>
-    <h2>Featured Projects</h2>
-    <h3>Text Mining and Analysis</h3>
-    <p>Exploring text preprocessing and machine learning techniques.</p>
+  
+<section id="projects">
+  <h2>Featured Projects</h2>
+  <p>
+    Explore selected projects showcasing my experience
+    with data science, machine learning, and data analysis.
+  </p>
 
-    <h3>Predictive Analytics</h3>
-    <p>Investigating how data can be used to predict outcomes.</p>
+  <div class="project-grid">
 
-    <h3>Data Wrangling</h3>
-    <p>Cleaning, transforming, and preparing data for analysis.</p>
-  </section>
+    <article class="project-card">
+      <h3>NOAA Severe Weather Impact Analysis</h3>
+      <p>
+        Preparing severe weather data through data cleaning,
+        transformation, and feature engineering to support
+        the analysis of high-impact weather events.
+      </p>
+      <p class="project-skills">
+        Data Wrangling | Feature Engineering | Python
+      </p>
+      <a href="#projects">Project details coming soon</a>
+    </article>
+
+    <article class="project-card">
+      <h3>Future Data Science Project</h3>
+      <p>
+        This project will highlight analytical techniques
+        and practical problem-solving skills developed
+        through my current coursework.
+      </p>
+      <p class="project-skills">
+        Project methods to be determined
+      </p>
+    </article>
+
+    <article class="project-card">
+      <h3>Future Machine Learning Project</h3>
+      <p>
+        This project will showcase another application
+        of data science or machine learning.
+      </p>
+      <p class="project-skills">
+        Project methods to be determined
+      </p>
+    </article>
+
+    <article class="project-card">
+      <h3>House Price Prediction</h3>
+      <p>
+        Exploring housing data to understand factors
+        associated with home prices and develop
+        predictive models.
+      </p>
+      <p class="project-skills">
+        Predictive Analytics | Regression
+      </p>
+      <a href="#projects">Project details coming soon</a>
+    </article>
+
+    <article class="project-card">
+      <h3>U.S. Airline Review Classification</h3>
+      <p>
+        Applying text preprocessing and machine learning
+        classification techniques to analyze airline
+        passenger reviews.
+      </p>
+      <p class="project-skills">
+        Text Mining | NLP | Classification
+      </p>
+      <a href="#projects">Project details coming soon</a>
+    </article>
+
+  </div>
+</section>
 
   <footer>
     <p>Data Science Portfolio | 2026</p>
