@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get in Touch | Andrea Barfield</title>
+  <meta name="description" content="Contact Andrea Barfield about data science, machine learning, and professional opportunities.">
+
+  <style>
+    :root {
+      --navy: #18213d;
+      --purple: #6545d8;
+      --purple-light: #f0edff;
+      --text: #30374c;
+      --muted: #697186;
+      --border: #e8e7f0;
+      --soft-blue: #eef4fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1050px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+
+    .site-header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-size: 0.94rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--purple);
+    }
+
+    .nav-links .contact-link {
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: var(--purple);
+      color: #ffffff;
+    }
+
+    .nav-links .contact-link:hover {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    /* Page introduction */
+
+    .page-intro {
+      max-width: 760px;
+      padding: 85px 0 45px;
+    }
+
+    .eyebrow {
+      color: var(--purple);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0 18px;
+      color: var(--navy);
+      font-size: clamp(2.7rem, 5vw, 4rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .page-intro p {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    /* Contact cards */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      padding-bottom: 90px;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      min-width: 0;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 8px 25px rgba(24, 33, 61, 0.04);
+    }
+
+    .contact-icon {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 15px;
+      background: var(--purple-light);
+      color: var(--purple);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .contact-card:nth-child(2) .contact-icon {
+      background: #e4f2f4;
+      color: #245d68;
+    }
+
+    .contact-card:nth-child(3) .contact-icon {
+      background: #e3edff;
+      color: #274c87;
+    }
+
+    .contact-card:nth-child(4) .contact-icon {
+      background: #f3e6ff;
+      color: #6545d8;
+    }
+
+    .contact-card h2 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 1.15rem;
+    }
+
+    .contact-card p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .contact-card a {
+      color: var(--purple);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Closing section */
+
+    .closing-note {
+      margin-bottom: 80px;
+      padding: 38px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #f0edff, #eef4fb);
+    }
+
+    .closing-note h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.6rem;
+    }
+
+    .closing-note p {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .site-footer p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--purple);
+    }
+
+    /* Mobile */
+
+    @media (max-width: 650px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 0.86rem;
+      }
+
+      .nav-links .contact-link {
+        padding: 8px 14px;
+      }
+
+      .page-intro {
+        padding-top: 55px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 60px;
+      }
+
+      .contact-card {
+        padding: 22px;
+        gap: 16px;
+      }
+
+      .closing-note {
+        margin-bottom: 55px;
+        padding: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="brand" href="/index.html">ANDREA BARFIELD</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/index.html">Home</a>
+        <a href="/index.html#projects">Projects</a>
+        <a href="/about.html">About</a>
+        <a class="contact-link" href="/contact.html"
+           aria-current="page">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="page-intro">
+      <span class="eyebrow">Let's connect</span>
+      <h1>Get in touch.</h1>
+      <p>
+        I'd love to connect with professionals, collaborate on projects,
+        and learn about opportunities in data science and machine
+        learning. Feel free to reach out using any of the options below.
+      </p>
+    </section>
+
+    <section class="contact-grid" aria-label="Contact information">
+
+      <article class="contact-card">
+        <div class="contact-icon" aria-hidden="true">@</div>
+        <div>
+          <h2>Email</h2>
+          <p>The best way to reach me.</p>
+          <a href="mailto:andrea.barfield24@gmail.com">
+            andrea.barfield24@gmail.com
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-icon" aria-hidden="true">GH</div>
+        <div>
+          <h2>GitHub</h2>
+          <p>Explore my repositories and data science projects.</p>
+          <a href="https://github.com/andreabarfield"
+             target="_blank" rel="noopener noreferrer">
+            Visit my GitHub &rarr;
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-icon" aria-hidden="true">in</div>
+        <div>
+          <h2>LinkedIn</h2>
+          <p>Connect with me professionally.</p>
+          <a href="https://linkedin.com/in/andrea-barfield-7542a2391"
+             target="_blank" rel="noopener noreferrer">
+            Connect on LinkedIn &rarr;
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-icon" aria-hidden="true">&#8962;</div>
+        <div>
+          <h2>Location</h2>
+          <p>Based in</p>
+          <strong>North Carolina, USA</strong>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="closing-note">
+      <h2>Thank you for visiting!</h2>
+      <p>
+        I'm continuing to build my skills through data science coursework
+        and hands-on projects. I welcome opportunities to learn, share
+        ideas, and connect with others working in data and analytics.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Andrea Barfield | Data Science Portfolio</p>
+
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/index.html#projects">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
