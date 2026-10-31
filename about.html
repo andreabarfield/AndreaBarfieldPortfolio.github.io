@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Andrea Barfield</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #26324a;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Navigation */
+    header {
+      border-bottom: 1px solid #eeeeF3;
+      background: #ffffff;
+    }
+
+    nav {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #26324a;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #8976b8;
+    }
+
+    .contact-button {
+      background: #8976b8;
+      color: white !important;
+      padding: 10px 18px;
+      border-radius: 7px;
+    }
+
+    .contact-button:hover {
+      background: #7561a5;
+    }
+
+    /* Page introduction */
+    .page-intro {
+      padding: 85px 0 55px;
+      text-align: center;
+      background: #faf9fc;
+    }
+
+    .eyebrow {
+      color: #8976b8;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 50px);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .page-intro p {
+      max-width: 680px;
+      margin: auto;
+      color: #687287;
+      font-size: 17px;
+    }
+
+    /* About section */
+    .about-section {
+      display: grid;
+      grid-template-columns: 0.85fr 1.5fr;
+      gap: 65px;
+      align-items: center;
+      padding: 80px 0;
+    }
+
+    .profile-image {
+      width: 100%;
+      max-width: 340px;
+      display: block;
+      margin: auto;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 18px;
+      color: #26324a;
+    }
+
+    .about-text p {
+      color: #687287;
+      margin-bottom: 16px;
+    }
+
+    /* Journey section */
+    .journey-section {
+      background: #faf9fc;
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-heading p {
+      color: #687287;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .journey-content {
+      max-width: 820px;
+      margin: auto;
+    }
+
+    .journey-content p {
+      color: #687287;
+      margin-bottom: 18px;
+    }
+
+    /* Education section */
+    .education-section {
+      padding: 75px 0;
+    }
+
+    .education-card {
+      max-width: 720px;
+      margin: auto;
+      padding: 30px;
+      border: 1px solid #e9e5f1;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 5px 20px rgba(38, 50, 74, 0.04);
+    }
+
+    .education-card h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .education-card p {
+      color: #687287;
+    }
+
+    .education-year {
+      color: #8976b8 !important;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    /* Skills section */
+    .skills-section {
+      background: #faf9fc;
+      padding: 75px 0;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .skill-card {
+      background: white;
+      border: 1px solid #e9e5f1;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .skill-card h3 {
+      color: #8976b8;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .skill-card ul {
+      padding-left: 20px;
+      color: #687287;
+    }
+
+    .skill-card li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #eeeeF3;
+      padding: 28px 0;
+      text-align: center;
+      color: #858da0;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      nav {
+        padding: 18px 0;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 55px 0;
+      }
+
+      .profile-image {
+        max-width: 260px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-intro {
+        padding: 60px 0 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/index.html" class="logo">Andrea Barfield</a>
+
+        <div class="nav-links">
+          <a href="/index.html">Home</a>
+          <a href="/index.html#projects">Projects</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html" class="contact-button">Get in touch</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-intro">
+      <div class="container">
+        <div class="eyebrow">Get to know me</div>
+        <h1>About Me</h1>
+        <p>
+          A background in education, a passion for data, and an interest
+          in using analytical thinking to solve meaningful problems.
+        </p>
+      </div>
+    </section>
+
+    <section class="container about-section">
+      <div>
+        <img
+          src="/IMG_7846.JPG"
+          alt="Professional portrait of Andrea Barfield"
+          class="profile-image"
+        >
+      </div>
+
+      <div class="about-text">
+        <h2>Hello, I'm Andrea.</h2>
+
+        <p>
+          My professional journey began in elementary education, where
+          I developed a passion for helping others learn, grow, and
+          succeed. Working across multiple grade levels taught me the
+          importance of understanding individual needs, interpreting
+          information, and communicating insights in ways that make
+          a difference.
+        </p>
+
+        <p>
+          That same curiosity and problem-solving mindset led me to
+          pursue data science. I earned my Bachelor of Science in
+          Data Science from Bellevue University, building a foundation
+          in programming, statistical analysis, data visualization,
+          and machine learning.
+        </p>
+
+        <p>
+          I am excited by the ever-changing nature of data science.
+          Each challenge brings something new to explore, learn, and
+          solve. My goal is to combine analytical thinking, technical
+          skills, and clear communication to turn data into meaningful
+          insights.
+        </p>
+      </div>
+    </section>
+
+    <section class="journey-section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">My background</div>
+          <h2>My Journey into Data Science</h2>
+        </div>
+
+        <div class="journey-content">
+          <p>
+            Before transitioning into data science, I worked in
+            elementary education, teaching across multiple grade
+            levels. My experience involved helping students develop
+            foundational reading skills, evaluating student progress,
+            and using assessment data to identify learning needs.
+          </p>
+
+          <p>
+            I also worked closely with families, communicating student
+            performance and turning data into information they could
+            understand and use. These experiences strengthened my
+            ability to interpret information, recognize patterns,
+            and explain complex concepts to nontechnical audiences.
+          </p>
+
+          <p>
+            I bring that same approach to data science: asking
+            questions, exploring information, identifying patterns,
+            and communicating findings in a way that supports
+            informed decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container education-section">
+      <div class="section-heading">
+        <div class="eyebrow">Academic background</div>
+        <h2>Education</h2>
+      </div>
+
+      <div class="education-card">
+        <h3>Bachelor of Science in Data Science</h3>
+        <p>Bellevue University</p>
+        <p class="education-year">2026</p>
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">What I work with</div>
+          <h2>Technical Skills</h2>
+          <p>
+            A growing toolkit for exploring data, building models,
+            and communicating meaningful findings.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3>Programming & Data Analysis</h3>
+            <ul>
+              <li>Python: data manipulation, cleaning, statistical analysis, and predictive modeling</li>
+              <li>R: data visualization</li>
+              <li>SQL: foundational database querying</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3>Data Science & Machine Learning</h3>
+            <ul>
+              <li>Exploratory Data Analysis</li>
+              <li>Statistical Analysis</li>
+              <li>Data Cleaning & Feature Engineering</li>
+              <li>Predictive Modeling</li>
+              <li>Machine Learning</li>
+              <li>Model Evaluation</li>
+              <li>Time Series Forecasting</li>
+              <li>Natural Language Processing</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3>Tools & Technologies</h3>
+            <ul>
+              <li>Jupyter Notebook</li>
+              <li>Tableau</li>
+              <li>Git & GitHub</li>
+              <li>Pandas & NumPy</li>
+              <li>scikit-learn</li>
+              <li>Matplotlib & Seaborn</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Andrea Barfield. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
