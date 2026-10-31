@@ -5,130 +5,132 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Andrea Barfield</title>
+  <meta name="description" content="Learn about Andrea Barfield, her background in education, data science education, and technical skills.">
 
   <style>
+    :root {
+      --navy: #18213d;
+      --purple: #6545d8;
+      --purple-light: #f0edff;
+      --text: #30374c;
+      --muted: #697186;
+      --border: #e8e7f0;
+      --soft-blue: #eef4fb;
+    }
+
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
       background: #ffffff;
-      color: #26324a;
       line-height: 1.7;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
     }
 
     .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
+      width: min(1050px, calc(100% - 48px));
+      margin: 0 auto;
     }
 
-    
-/* Navigation */
+    /* Navigation - matches Contact page */
 
-  .site-header {
-    padding: 24px 0;
-    border-bottom: 1px solid #e8e7f0;
-    background: #ffffff;
-  }
+    .site-header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+    }
 
-  .site-header .container {
-    width: min(1050px, calc(100% - 48px));
-    margin: 0 auto;
-  }
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-  .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
+    .brand {
+      color: var(--navy);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-  .brand {
-    color: #18213d;
-    font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    white-space: nowrap;
-  }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
 
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 26px;
-    flex-wrap: wrap;
-  }
+    .nav-links a {
+      color: var(--text);
+      font-size: 0.94rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-  .nav-links a {
-    color: #30374c;
-    font-size: 0.94rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--purple);
+    }
 
-  .nav-links a:hover,
-  .nav-links a[aria-current="page"] {
-    color: #6545d8;
-  }
+    .nav-links .contact-link {
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: var(--purple);
+      color: #ffffff;
+    }
 
-  .nav-links .contact-link {
-    padding: 10px 20px;
-    border-radius: 30px;
-    background: #6545d8;
-    color: #ffffff;
-  }
-
-  .nav-links .contact-link:hover {
-    background: #18213d;
-    color: #ffffff;
-  }
-
+    .nav-links .contact-link:hover {
+      background: var(--navy);
+      color: #ffffff;
+    }
 
     /* Page introduction */
+
     .page-intro {
-      padding: 85px 0 55px;
-      text-align: center;
-      background: #faf9fc;
+      max-width: 760px;
+      padding: 85px 0 45px;
     }
 
     .eyebrow {
-      color: #8976b8;
-      font-size: 13px;
-      font-weight: bold;
+      color: var(--purple);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
     }
 
     h1 {
-      font-size: clamp(36px, 5vw, 50px);
-      line-height: 1.2;
-      margin-bottom: 18px;
+      margin: 12px 0 18px;
+      color: var(--navy);
+      font-size: clamp(2.7rem, 5vw, 4rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
     }
 
     .page-intro p {
-      max-width: 680px;
-      margin: auto;
-      color: #687287;
-      font-size: 17px;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.08rem;
     }
 
     /* About section */
+
     .about-section {
       display: grid;
       grid-template-columns: 0.85fr 1.5fr;
-      gap: 65px;
+      gap: 55px;
       align-items: center;
-      padding: 80px 0;
+      padding: 55px 0 85px;
     }
 
     .profile-image {
@@ -136,25 +138,30 @@
       max-width: 340px;
       display: block;
       margin: auto;
-      border-radius: 14px;
+      border-radius: 20px;
       object-fit: cover;
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 18px;
-      color: #26324a;
+      color: var(--navy);
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+
+    .about-text h2 {
+      margin: 0 0 18px;
     }
 
     .about-text p {
-      color: #687287;
-      margin-bottom: 16px;
+      color: var(--muted);
+      margin: 0 0 16px;
     }
 
     /* Journey section */
+
     .journey-section {
-      background: #faf9fc;
       padding: 75px 0;
+      background: #faf9fc;
     }
 
     .section-heading {
@@ -162,10 +169,14 @@
       margin-bottom: 38px;
     }
 
+    .section-heading h2 {
+      margin: 10px 0 12px;
+    }
+
     .section-heading p {
-      color: #687287;
       max-width: 650px;
       margin: auto;
+      color: var(--muted);
     }
 
     .journey-content {
@@ -174,11 +185,12 @@
     }
 
     .journey-content p {
-      color: #687287;
+      color: var(--muted);
       margin-bottom: 18px;
     }
 
     /* Education section */
+
     .education-section {
       padding: 75px 0;
     }
@@ -187,131 +199,179 @@
       max-width: 720px;
       margin: auto;
       padding: 30px;
-      border: 1px solid #e9e5f1;
-      border-radius: 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
       background: #ffffff;
-      box-shadow: 0 5px 20px rgba(38, 50, 74, 0.04);
+      box-shadow: 0 8px 25px rgba(24, 33, 61, 0.04);
     }
 
     .education-card h3 {
-      font-size: 20px;
-      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 1.25rem;
+      margin: 0 0 5px;
     }
 
     .education-card p {
-      color: #687287;
+      color: var(--muted);
+      margin: 0;
     }
 
     .education-year {
-      color: #8976b8 !important;
-      font-weight: bold;
-      margin-top: 8px;
+      color: var(--purple) !important;
+      font-weight: 700;
+      margin-top: 8px !important;
     }
 
     /* Skills section */
+
     .skills-section {
-      background: #faf9fc;
       padding: 75px 0;
+      background: #faf9fc;
     }
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
     }
 
     .skill-card {
-      background: white;
-      border: 1px solid #e9e5f1;
-      border-radius: 12px;
-      padding: 25px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 8px 25px rgba(24, 33, 61, 0.04);
     }
 
     .skill-card h3 {
-      color: #8976b8;
-      font-size: 18px;
-      margin-bottom: 15px;
+      color: var(--navy);
+      font-size: 1.1rem;
+      margin: 0 0 16px;
     }
 
     .skill-card ul {
       padding-left: 20px;
-      color: #687287;
+      margin: 0;
+      color: var(--muted);
     }
 
     .skill-card li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     /* Footer */
-    footer {
-      border-top: 1px solid #eeeeF3;
+
+    .site-footer {
       padding: 28px 0;
-      text-align: center;
-      color: #858da0;
-      font-size: 13px;
+      border-top: 1px solid var(--border);
     }
 
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .site-footer p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--purple);
+    }
+
+    /* Mobile */
+
     @media (max-width: 750px) {
-      nav {
-        padding: 18px 0;
+      .navigation {
+        align-items: flex-start;
         flex-direction: column;
+        gap: 16px;
       }
 
       .nav-links {
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 0.86rem;
+      }
+
+      .nav-links .contact-link {
+        padding: 8px 14px;
+      }
+
+      .page-intro {
+        padding: 55px 0 35px;
       }
 
       .about-section {
         grid-template-columns: 1fr;
         gap: 35px;
-        padding: 55px 0;
+        padding: 45px 0 60px;
       }
 
       .profile-image {
-        max-width: 260px;
+        max-width: 280px;
+      }
+
+      .journey-section,
+      .education-section,
+      .skills-section {
+        padding: 55px 0;
       }
 
       .skills-grid {
         grid-template-columns: 1fr;
       }
 
-      .page-intro {
-        padding: 60px 0 45px;
+      .skill-card {
+        padding: 24px;
+      }
+
+      .education-card {
+        padding: 24px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
 
-    /* Your existing mobile CSS ends here */
+    @media (max-width: 400px) {
+      .container {
+        width: calc(100% - 32px);
+      }
 
-}
-
-/* Final desktop navigation adjustment */
-
-.site-header .navigation .nav-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 26px;
-  flex-wrap: nowrap;
-}
-
-.site-header .navigation .nav-links a {
-  white-space: nowrap;
-}
-
-@media (max-width: 650px) {
-  .site-header .navigation .nav-links {
-    flex-wrap: wrap;
-  }
-}
+      .nav-links {
+        gap: 12px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  
   <header class="site-header">
     <div class="container navigation">
       <a class="brand" href="/index.html">ANDREA BARFIELD</a>
@@ -325,20 +385,19 @@
     </div>
   </header>
 
-  <main>
+  <main class="container">
 
     <section class="page-intro">
-      <div class="container">
-        <div class="eyebrow">Get to know me</div>
-        <h1>About Me</h1>
-        <p>
-          A background in education, a passion for data, and an interest
-          in using analytical thinking to solve meaningful problems.
-        </p>
-      </div>
+      <span class="eyebrow">Get to know me</span>
+      <h1>About Me</h1>
+      <p>
+        A background in education, a passion for data, and an interest
+        in using analytical thinking to solve meaningful problems.
+      </p>
     </section>
 
-    <section class="container about-section">
+    <section class="about-section">
+
       <div>
         <img
           src="/IMG_7846.JPG"
@@ -375,12 +434,14 @@
           insights.
         </p>
       </div>
+
     </section>
 
     <section class="journey-section">
       <div class="container">
+
         <div class="section-heading">
-          <div class="eyebrow">My background</div>
+          <span class="eyebrow">My background</span>
           <h2>My Journey into Data Science</h2>
         </div>
 
@@ -408,26 +469,32 @@
             informed decisions.
           </p>
         </div>
+
       </div>
     </section>
 
-    <section class="container education-section">
-      <div class="section-heading">
-        <div class="eyebrow">Academic background</div>
-        <h2>Education</h2>
-      </div>
+    <section class="education-section">
+      <div class="container">
 
-      <div class="education-card">
-        <h3>Bachelor of Science in Data Science</h3>
-        <p>Bellevue University</p>
-        <p class="education-year">2026</p>
+        <div class="section-heading">
+          <span class="eyebrow">Academic background</span>
+          <h2>Education</h2>
+        </div>
+
+        <div class="education-card">
+          <h3>Bachelor of Science in Data Science</h3>
+          <p>Bellevue University</p>
+          <p class="education-year">2026</p>
+        </div>
+
       </div>
     </section>
 
     <section class="skills-section">
       <div class="container">
+
         <div class="section-heading">
-          <div class="eyebrow">What I work with</div>
+          <span class="eyebrow">What I work with</span>
           <h2>Technical Skills</h2>
           <p>
             A growing toolkit for exploring data, building models,
@@ -478,9 +545,18 @@
 
   </main>
 
-  <footer>
-    <div class="container">
-      © 2026 Andrea Barfield. All rights reserved.
+  <footer class="site-footer">
+    <div class="container footer-content">
+
+      <p>&copy; 2026 Andrea Barfield | Data Science Portfolio</p>
+
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/index.html#projects">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+
     </div>
   </footer>
 
