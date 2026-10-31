@@ -32,46 +32,58 @@
     }
 
     /* Navigation */
-    header {
-      border-bottom: 1px solid #eeeeF3;
-      background: #ffffff;
-    }
 
-    nav {
-      min-height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+  header {
+    border-bottom: 1px solid #eeeeF3;
+    background: #ffffff;
+  }
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #26324a;
-    }
+  header .container {
+    width: 94%;
+    max-width: 1400px;
+  }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      font-size: 14px;
-    }
+  nav {
+    min-height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
 
-    .nav-links a:hover {
-      color: #8976b8;
-    }
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #26324a;
+    white-space: nowrap;
+  }
 
-    .contact-button {
-      background: #8976b8;
-      color: white !important;
-      padding: 10px 18px;
-      border-radius: 7px;
-    }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    font-size: 16px;
+    font-weight: 600;
+  }
 
-    .contact-button:hover {
-      background: #7561a5;
-    }
+  .nav-links a:hover {
+    color: #8976b8;
+  }
+
+  .contact-button {
+    background: #8976b8;
+    color: white !important;
+    padding: 13px 24px;
+    border-radius: 30px;
+  }
+
+  .contact-button:hover {
+    background: #7561a5;
+  }
+
 
     /* Page introduction */
     .page-intro {
@@ -269,7 +281,7 @@
   <header>
     <div class="container">
       <nav>
-        <a href="/index.html" class="logo">Andrea Barfield</a>
+        <a href="/index.html" class="logo">ANDREA BARFIELD</a>
 
         <div class="nav-links">
           <a href="/index.html">Home</a>
