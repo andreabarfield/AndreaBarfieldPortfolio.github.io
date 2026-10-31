@@ -281,6 +281,31 @@
         padding: 60px 0 45px;
       }
     }
+
+    /* Your existing mobile CSS ends here */
+
+}
+
+/* Final desktop navigation adjustment */
+
+.site-header .navigation .nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 26px;
+  flex-wrap: nowrap;
+}
+
+.site-header .navigation .nav-links a {
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .site-header .navigation .nav-links {
+    flex-wrap: wrap;
+  }
+}
   </style>
 </head>
 
